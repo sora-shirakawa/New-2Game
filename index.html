@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>錬金店経営ゲーム</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <section id="titleScreen" class="screen active">
+        <h1>錬金店経営ゲーム</h1>
+        <p>4週間で人気錬金店を目指そう</p>
+        <div class="actions">
+          <button id="newGameBtn">はじめる</button>
+          <button id="continueBtn">つづきから</button>
+          <button id="resetBtn" class="danger">リセット</button>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen">
+        <header class="status-grid">
+          <div>週: <strong id="weekText"></strong></div>
+          <div>曜日: <strong id="dayText"></strong></div>
+          <div>💰所持金: <strong id="moneyText"></strong>G</div>
+          <div>⭐評判: <strong id="repText"></strong></div>
+          <div>市場: <strong id="marketText"></strong></div>
+        </header>
+
+        <section class="inventory-wrap">
+          <div>
+            <h3>素材在庫</h3>
+            <ul id="materialList"></ul>
+          </div>
+          <div>
+            <h3>商品在庫（次回販売）</h3>
+            <ul id="productList"></ul>
+          </div>
+        </section>
+
+        <section id="actionPanel"></section>
+        <section id="logPanel"><h3>ログ</h3><ul id="logList"></ul></section>
+
+        <div class="actions">
+          <button id="nextDayBtn">次の日へ進む</button>
+          <button id="saveBtn">セーブ</button>
+          <button id="backTitleBtn">タイトルへ戻る</button>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="screen">
+        <h2>リザルト</h2>
+        <div id="resultBody"></div>
+        <div class="actions">
+          <button id="replayBtn">もう一度遊ぶ</button>
+          <button id="resultTitleBtn">タイトルへ</button>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
